@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Planner - Jadwal Harian</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Jadwal Harian</h1>
+      <p id="today" class="today" aria-live="polite"></p>
+    </header>
+
+    <main>
+      <form id="task-form" class="task-form" autocomplete="off">
+        <input type="text" id="task-name" placeholder="Nama Kegiatan" required aria-label="Nama Kegiatan">
+        <input type="time" id="task-time" required aria-label="Waktu Kegiatan">
+        <button type="submit" class="btn">Tambah</button>
+      </form>
+
+      <ul id="task-list" class="task-list" aria-live="polite"></ul>
+    </main>
+
+    <footer class="footer">
+      <small>Data tersimpan di localStorage pada browser Anda.</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

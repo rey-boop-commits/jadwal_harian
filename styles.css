@@ -1,0 +1,35 @@
+/* Minimal, clean, responsive styles for Daily Planner */
+:root{
+  --bg:#f6f8fa;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --danger:#ef4444;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI, Roboto, -apple-system, 'Helvetica Neue', Arial;color:#0f172a;background:var(--bg);}
+.container{max-width:760px;margin:32px auto;padding:20px}
+.header{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.header h1{margin:0;font-size:1.6rem}
+.today{margin:0;color:var(--muted)}
+.task-form{display:flex;gap:8px;align-items:center;margin-bottom:16px}
+.task-form input[type=text]{flex:1;padding:10px;border:1px solid #e5e7eb;border-radius:6px}
+.task-form input[type=time]{width:120px;padding:10px;border:1px solid #e5e7eb;border-radius:6px}
+.btn{background:var(--accent);border:none;color:#fff;padding:10px 14px;border-radius:6px;cursor:pointer}
+.btn:hover{filter:brightness(.95)}
+.task-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.task-item{display:flex;align-items:center;justify-content:space-between;padding:12px;background:var(--card);border-radius:8px;box-shadow:0 1px 0 rgba(15,23,42,0.04)}
+.task-left{display:flex;align-items:center;gap:12px}
+.task-time{font-weight:600;color:var(--accent);min-width:64px}
+.task-name{color:#0f172a}
+.task-actions{display:flex;gap:8px;align-items:center}
+.btn-icon{background:transparent;border:1px solid transparent;padding:6px;border-radius:6px;cursor:pointer}
+.btn-delete{color:var(--danger);border:1px solid rgba(239,68,68,0.12)}
+.completed .task-name{text-decoration:line-through;color:var(--muted)}
+.completed .task-time{opacity:0.6}
+@media (max-width:560px){
+  .task-form{flex-direction:column;align-items:stretch}
+  .task-form input[type=time]{width:100%}
+  .task-item{flex-direction:column;align-items:stretch;gap:8px}
+  .task-left{width:100%;justify-content:space-between}
+}
